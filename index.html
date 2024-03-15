@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Background Image Width Overlay</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    .bgImage{
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-image: url('jug img.jpg');
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+    }
+    .content{
+      position: absolute;
+      top: 20%;
+      left: 20%;
+      transform: translate(-20%, -20%);
+      text-align: center;
+    }
+    .content h2{
+      font-size: 50px;
+      color: white;
+      margin-bottom: 20px;       
+    }
+    .content h2 span{
+      color: white;
+    }
+    .content p{
+      font-size: 20px;
+      color: white;
+      opacity: 0.8;
+    }
+    .content button{
+      padding: 12px 22px;
+      margin-top: 30px;
+      font-size: 22px;
+      border: none;
+      outline: none;
+      color: white;
+      background-color: #0077b6;
+      border-radius: 25px;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.5s; 
+    }
+    .content button:hover{
+      opacity: 1;
+    }
+
+    /* Styling for the pop-up table */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    }
+
+    
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bgImage"></div>
+
+  <div class="content">
+    <h2>POLLUTION <span>DETECTION</span></h2>
+    <p>Click the button to simulate pollution detection.</p>
+    <button onclick="showPopup()">Detect Pollution</button>
+  </div>
+<script>
+  function showPopup() {
+    // Add the URL of the web page you want to open in the parentheses below
+    window.open("http://192.168.47.1/");
+  }
+</script>
+</body>
+</html>
